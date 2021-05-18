@@ -6,6 +6,10 @@ app = Flask(__name__)
 @app.route('/')
 def index():
   return render_template('/base/nav.html')
+ 
+@app.route('/index')
+def practica():
+  return render_template('index.html')
 
 
 if __name__ == "__main__":
