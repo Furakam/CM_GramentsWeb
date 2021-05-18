@@ -30,7 +30,8 @@
   font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
   margin-left: 16.4rem;
-  text-decoration: underline;
+  text-decoration: none;
+  /*text-decoration: underline;*/
   color: #EDF2EF;
 }
 .catalogos a{
