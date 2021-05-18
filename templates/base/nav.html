@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='/css/normalize.css' ) }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='/css/nav.css' ) }}">
-  <title>Inicio</title>
+  <title>{{pagename}}</title>
 </head>
 <body>
   <ul class="nav">
@@ -76,8 +76,8 @@
       </g>
       </svg>
     </li>
-    <li class="inicio"><a href="/">Inicio</a></li>
-    <li class="catalogos"><a href="">Catálogos</a></li>
+    <li class="inicio"><a href="/inicio">Inicio</a></li>
+    <li class="catalogo"><a href="/catalogo">Catálogos</a></li>
     <li>
       <div class="busqueda-container">
         <form action="" class="form">
@@ -93,6 +93,10 @@
       <a href=""><img src="../../static/src/userLogo.svg" alt="userLogo"></a>
     </li>
   </ul>
+
+  {% block content %}
+  {% endblock %}
+
   <div class="footer">
     <p class="footer__info1">
       Traemos tu productos originales de EEUU<br>
@@ -106,13 +110,12 @@
         productos sin necesidad de entrar a<br>
         la web.
       </p> 
-      <div>
-        <img src="../../static/src/InstagramLogo.svg" alt="InstagramLogo">
-        <img src="../../static/src/FacebookLogo.svg" alt="FacebookLogo"> 
+      <div class="social">
+        <a href="https://www.instagram.com" target="_blank"><img src="../../static/src/InstagramLogo.svg" alt="InstagramLogo"></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="../../static/src/FacebookLogo.svg" alt="FacebookLogo"></a>
       </div>
       <span>Correo: cmgarmentsimport@gmail.com</span>
     </div>
   </div>
-
 </body>
 </html>

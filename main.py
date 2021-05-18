@@ -3,10 +3,16 @@ from flask import Flask,render_template , url_for, redirect
 #Probando mi nuevo usuario
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-  return render_template('/base/nav.html')
- 
+@app.route('/<pagename>')
+def index(pagename):
+  if pagename == 'inicio':
+    pagina = 'index.html'
+  elif pagename == 'catalogo':
+    pagina = 'catalogo.html'
+  else:
+    return redirect('/inicio')
+  return render_template(pagina)
+
 @app.route('/index')
 def practica():
   return render_template('index.html')
