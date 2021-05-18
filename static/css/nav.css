@@ -83,6 +83,69 @@
   display: flex;
   margin-left: 7.6rem;
 }
+/*?Dando estilo al login popup*/
+.login-contaner{
+  position: absolute;
+  right: 0;
+  width:32.5rem;
+  height: 41.6rem;
+  background: rgba(33, 39, 56, 0.8);
+  border-radius: 0px 0px 10px 10px;
+  z-index: 2;
+}
+.login-contaner form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-contaner span{
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 4.5rem;
+  color: #ffffff;
+  margin-top: 2.6rem;
+}
+.login-contaner__input-userpass{
+  width:26.8rem;
+  height: 4.1rem;
+  background: #393C46;
+  border: solid 2px #ffffff;
+  color: #999999;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Roboto';
+  font-weight: normal;
+  border-radius: 10px;
+  margin-top: 2.5rem;
+  outline: none;
+}
+.login-contaner__iniciosesion{
+  width: 26.8rem;
+  height: 4.5rem;
+  background: #6D717B;
+  border: solid 3px #878C98;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 3.6rem;
+}
+.login-contaner__olvidaste{
+  text-decoration: none;
+  color: #E07474;
+  font-size: 1.5rem;
+  font-family: 'Roboto';
+  font-weight: normal;
+  margin-top: 1.4rem;
+}
+.login-contaner__registrarse{
+  text-decoration: none;
+  color: #55A9D9;
+  font-size: 1.5rem;
+  font-family: 'Roboto';
+  font-weight: normal;
+  margin-top: .4rem;
+}
 /*?Aqui comienza el estilo de footer*/
 .footer{
   display: flex;
