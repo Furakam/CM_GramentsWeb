@@ -90,17 +90,18 @@
       <a href=""><img src="../../static/src/CarritoDeCompras.svg" alt="carritoCompras"></a>
     </li>
     <li class="user-logo">
-      <a href=""><img src="../../static/src/userLogo.svg" alt="userLogo"></a>
+      <button class="user-logo__boton" id="user-boton__mostrar" type="button"><img src="../../static/src/userLogo.svg" alt="userLogo"></button>
+      <button class="user-logo__boton-ocultar" id="user-boton__ocultar" type="button"><img src="../../static/src/userLogo.svg" alt="userLogo"></button>
     </li>
   </ul>
-  <div class="login-contaner">
+  <div class="login-container" id="login-container">
     <form action="">
       <span>Login</span>
-      <input class="login-contaner__input-userpass" type="text" placeholder="Usuario">
-      <input class="login-contaner__input-userpass" type="text" placeholder="Contraseña">
-      <input class="login-contaner__iniciosesion" type="submit" value="Iniciar Sesion">
-      <a class="login-contaner__olvidaste" href="">¿Olvidaste tu contraseña?</a>
-      <a class="login-contaner__registrarse" href="">Registrarse</a>
+      <input class="login-container__input-userpass" type="text" placeholder="Usuario">
+      <input class="login-container__input-userpass" type="text" placeholder="Contraseña">
+      <input class="login-container__iniciosesion" type="submit" value="Iniciar Sesion">
+      <a class="login-container__olvidaste" href="">¿Olvidaste tu contraseña?</a>
+      <a class="login-container__registrarse" href="">Registrarse</a>
     </form>
   </div>
 
@@ -127,5 +128,6 @@
       <span>Correo: cmgarmentsimport@gmail.com</span>
     </div>
   </div>
+  <script src="../../static/js/loginPopup.js"></script>
 </body>
 </html>

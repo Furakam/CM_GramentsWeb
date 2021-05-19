@@ -12,11 +12,13 @@
 .nav{
   background:#212738;
   display:flex;
+  flex-wrap: wrap;
   text-decoration: none;
   width:100%;
-  height: 5.5rem;
+  min-height: 5.5rem;
   list-style: none;
   align-items: center;
+  flex-shrink: 1rem;
 }
 /*?Estilo del logo*/
 .logo svg{
@@ -26,20 +28,34 @@
   margin: 0;
 }
 /*?Estilo de los links de paginas*/
+.inicio{
+  display: flex;
+}
 .inicio a{
   font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
-  margin-left: 16.4rem;
+  margin-left: 12.005856515vw;
   text-decoration: none;
   /*text-decoration: underline;*/
   color: #EDF2EF;
 }
+.inicio a:hover{
+  filter: brightness(150%);
+  transform: scale(1.04);
+}
+.catalogo{
+  display: flex;
+}
 .catalogo a{
   font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
-  margin-left: 9.6rem;
+  margin-left: 7.027818448vw;
   text-decoration: none;
   color: #EDF2EF;
+}
+.catalogo a:hover{
+  filter: brightness(150%);
+  transform: scale(1.04);
 }
 /*?Estilo de la barra de busqueda*/
 .busqueda-container{
@@ -50,7 +66,7 @@
   align-items: center;
   padding: 0 .4rem 0 1rem;
   border-radius: 2rem;
-  margin-left: 11.9rem;
+  margin-left: 8.711566618vw;
 }
 .form{
   display: flex;
@@ -75,16 +91,49 @@
   border: none;
   cursor: pointer;
 }
+/*?Estilo de carrito de compras y boton de login*/
 .carrito-compras{
   display: flex;
-  margin-left: 7.7rem;
+  margin-left: 5.636896047vw;
+  min-width: 4rem;
+}
+.carrito-compras:hover{
+  filter: brightness(150%);
+  transform: scale(1.04);
 }
 .user-logo{
   display: flex;
-  margin-left: 7.6rem;
+  margin-left: 5.563689605vw;
+  min-width: 4rem;
 }
+.user-logo__boton:hover{
+  filter: brightness(150%);
+  transform: scale(1.04);
+}
+.user-logo__boton, .user-logo__boton-ocultar{
+  background:transparent;
+  border: none;
+  cursor: pointer;
+}
+.user-logo__boton-ocultar{
+  display: none;
+}
+
+.user-logo__boton.oculto{
+  display: none;
+  filter: brightness(150%);
+  transform: scale(1.04);
+}
+.user-logo__boton-ocultar.visible{
+  display: block;
+  border-radius: .5rem;
+  border: solid .25rem #30384f;
+  filter: brightness(150%);
+  transform: scale(1.04);
+}
+
 /*?Dando estilo al login popup*/
-.login-contaner{
+.login-container{
   position: absolute;
   right: 0;
   width:32.5rem;
@@ -92,20 +141,25 @@
   background: rgba(33, 39, 56, 0.8);
   border-radius: 0px 0px 10px 10px;
   z-index: 2;
+  visibility: hidden;
 }
-.login-contaner form{
+.login-container.active{
+  visibility: visible;
+}
+
+.login-container form{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.login-contaner span{
+.login-container span{
   font-family: 'Roboto';
   font-weight: bold;
   font-size: 4.5rem;
   color: #ffffff;
   margin-top: 2.6rem;
 }
-.login-contaner__input-userpass{
+.login-container__input-userpass{
   width:26.8rem;
   height: 4.1rem;
   background: #393C46;
@@ -119,7 +173,7 @@
   margin-top: 2.5rem;
   outline: none;
 }
-.login-contaner__iniciosesion{
+.login-container__iniciosesion{
   width: 26.8rem;
   height: 4.5rem;
   background: #6D717B;
@@ -129,8 +183,9 @@
   font-weight: bold;
   font-size: 2rem;
   margin-top: 3.6rem;
+  cursor: pointer;
 }
-.login-contaner__olvidaste{
+.login-container__olvidaste{
   text-decoration: none;
   color: #E07474;
   font-size: 1.5rem;
@@ -138,7 +193,7 @@
   font-weight: normal;
   margin-top: 1.4rem;
 }
-.login-contaner__registrarse{
+.login-container__registrarse{
   text-decoration: none;
   color: #55A9D9;
   font-size: 1.5rem;
