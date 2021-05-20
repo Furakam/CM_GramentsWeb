@@ -94,16 +94,19 @@
       <button class="user-logo__boton-ocultar" id="user-boton__ocultar" type="button"><img src="../../static/src/userLogo.svg" alt="userLogo"></button>
     </li>
   </ul>
-  <div class="login-container" id="login-container">
+  <div class="login-container"  id="login-container">
+  </div>
+  <div class="form-container" id="form-container" >
     <form action="">
       <span>Login</span>
       <input class="login-container__input-userpass" type="text" placeholder="Usuario">
-      <input class="login-container__input-userpass" type="text" placeholder="Contraseña">
+      <input class="login-container__input-userpass" type="password" placeholder="Contraseña">
       <input class="login-container__iniciosesion" type="submit" value="Iniciar Sesion">
       <a class="login-container__olvidaste" href="">¿Olvidaste tu contraseña?</a>
       <a class="login-container__registrarse" href="">Registrarse</a>
     </form>
   </div>
+
 
   {% block content %}
   {% endblock %}

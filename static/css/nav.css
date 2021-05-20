@@ -135,24 +135,37 @@
 /*?Dando estilo al login popup*/
 .login-container{
   position: absolute;
+  width: 100%;
+  min-height: 91vh;
+  background:transparent;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 2;
+}
+.form-container{
+  position: absolute;
   right: 0;
   width:32.5rem;
   height: 41.6rem;
   background: rgba(33, 39, 56, 0.8);
   border-radius: 0px 0px 10px 10px;
-  z-index: 2;
+  cursor: auto;
+  z-index: 3;
   visibility: hidden;
 }
 .login-container.active{
   visibility: visible;
 }
+.form-container.active{
+  visibility: visible;
+}
 
-.login-container form{
+.form-container form{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.login-container span{
+.form-container span{
   font-family: 'Roboto';
   font-weight: bold;
   font-size: 4.5rem;
@@ -163,8 +176,8 @@
   width:26.8rem;
   height: 4.1rem;
   background: #393C46;
-  border: solid 2px #ffffff;
-  color: #999999;
+  border: solid 2px #999999;
+  color: #ffffff;
   text-align: center;
   font-size: 2rem;
   font-family: 'Roboto';
@@ -173,6 +186,15 @@
   margin-top: 2.5rem;
   outline: none;
 }
+.login-container__input-userpass::placeholder{
+  color: #999999;
+}
+.login-container__input-userpass:hover, .login-container__input-userpass:focus{
+  transform: scale(1.015);
+  border: solid 2px #ffffff;
+  transition: ease-in-out .2s;
+}
+
 .login-container__iniciosesion{
   width: 26.8rem;
   height: 4.5rem;
@@ -185,6 +207,12 @@
   margin-top: 3.6rem;
   cursor: pointer;
 }
+.login-container__iniciosesion:hover{
+  transform: scale(1.005);
+  transition: ease-in-out .2s;
+  filter: brightness(110%);
+}
+
 .login-container__olvidaste{
   text-decoration: none;
   color: #E07474;
@@ -200,6 +228,11 @@
   font-family: 'Roboto';
   font-weight: normal;
   margin-top: .4rem;
+}
+.login-container__olvidaste:hover,.login-container__registrarse:hover{
+  transform: scale(1.03);
+  transition: ease-in-out .2s;
+  filter: brightness(130%);
 }
 /*?Aqui comienza el estilo de footer*/
 .footer{
