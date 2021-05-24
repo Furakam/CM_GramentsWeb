@@ -18,6 +18,8 @@
   min-height: 5.5rem;
   list-style: none;
   align-items: center;
+  justify-content:space-between;
+  padding-right: 1.8rem;
   flex-shrink: 1rem;
 }
 /*?Estilo del logo*/
@@ -34,7 +36,6 @@
 .inicio a{
   font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
-  margin-left: 12.005856515vw;
   text-decoration: none;
   /*text-decoration: underline;*/
   color: #EDF2EF;
@@ -49,7 +50,6 @@
 .catalogo a{
   font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
-  margin-left: 7.027818448vw;
   text-decoration: none;
   color: #EDF2EF;
 }
@@ -66,7 +66,6 @@
   align-items: center;
   padding: 0 .4rem 0 1rem;
   border-radius: 2rem;
-  margin-left: 8.711566618vw;
   transform: scale(.95);
   transition: ease-out .2s;
 }
@@ -104,7 +103,6 @@
 /*?Estilo de carrito de compras y boton de login*/
 .carrito-compras{
   display: flex;
-  margin-left: 5.636896047vw;
   min-width: 4rem;
 }
 .carrito-compras:hover{
@@ -113,7 +111,6 @@
 }
 .user-logo{
   display: flex;
-  margin-left: 5.563689605vw;
   min-width: 4rem;
 }
 .user-logo__boton:hover{
@@ -279,4 +276,23 @@
   text-align: center;
   justify-content: center;
   margin: 2.8rem 3.6rem auto;
+}
+
+
+/*?MediaQueris*/
+@media only screen and (max-width: 1110px){
+  .footer__info1{
+    font-size: 2rem;
+  }
+  .footer__info2{
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 975px){
+  .footer__info1{
+    font-size: 1.8rem;
+  }
+  .footer__info2{
+    font-size: 1.8rem;
+  }
 }
