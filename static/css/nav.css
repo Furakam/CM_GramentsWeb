@@ -67,6 +67,16 @@
   padding: 0 .4rem 0 1rem;
   border-radius: 2rem;
   margin-left: 8.711566618vw;
+  transform: scale(.95);
+  transition: ease-out .2s;
+}
+.busqueda-container:hover{
+  transform: scale(1);
+  transition: ease-in .2s;
+}
+.busqueda-container:focus-within,
+.busqueda-container__input:focus-within{
+  transform:scale(1);
 }
 .form{
   display: flex;
