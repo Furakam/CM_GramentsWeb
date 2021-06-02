@@ -49,16 +49,16 @@ margin: 6.9rem auto auto auto;
 }
 
 .relojes{
-  background-image: url('../static/img/categorias/relojes.jpg');
+  background-image: url('../img/categorias/relojes.jpg');
 }
 .carteras{
-  background-image: url('../static/img/categorias/carterasDeMujer.jpg');
+  background-image: url('../img/categorias/carterasDeMujer.jpg');
 }
 .prendas{
-  background-image: url('../static/img/categorias/prendas.jpg');
+  background-image: url('../img/categorias/prendas.jpg');
 }
 .calzados{
-  background-image: url('../static/img/categorias/calzado.jpg');
+  background-image: url('../img/categorias/calzado.jpg');
 }
 
 .texto{
