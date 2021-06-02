@@ -1,7 +1,23 @@
 {% extends 'base/nav.html' %}
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='/css/catalogo.css' ) }}">
-<p>
-    la pepelucha
-</p>
+<h1>Escoge la categoria de tu preferencia</h1>
+<div class="Medio">
+  <div class="contiene">
+      <a class="button reloj" href="" target="_blank"></a>
+      <a class="textt" href="" target="_blank">Relojes</a>
+  </div>
+  <div class= "contiene cartera"> 
+    <a class="button cartera" href="" target="_blank"></a>
+    <a class="textt" href="" target="_blank">Carteras</a>
+  </div>
+  <div class="contiene">
+    <a class="button prenda" href="" target="_blank"></a>
+    <a class="textt" href="" target="_blank">Prendas</a>
+  </div>
+  <div class="contiene calzado">
+    <a class="button calzado" href="" target="_blank"></a>
+    <a class="textt" href="" target="_blank">Calzados</a>
+  </div>
+</div>
 {% endblock %}
