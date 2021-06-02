@@ -14,29 +14,40 @@ font-size: 4.5rem;
 text-align: center;
 font-family: 'Roboto', sans-serif;
 font-weight: bold;
-margin: 6.9rem auto auto auto;
+margin: 6.9rem auto 7.9rem auto;
+color: #242F2D;
+
 }
 
 .container-catalogo{
   display: flex;
   width: 1064px;
   height: 192px;
-  margin: 204px auto auto auto;
+  margin: 0 auto 14.7rem auto;
   flex-wrap: wrap;
   justify-content: center;
 }
 .cartera{
   display: flex;
   margin: 0 52px 0 52px;
+  
 }
+
+  
+
 .calzado{
   display: flex;
   margin: 53px 0 0 0;
+
 }
 .boton-container{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: ease-in-out 0.2s;
+}
+.boton-container:hover{
+  transform: scale(1.1);
 }
 .boton{
   width: 320px;
@@ -46,7 +57,9 @@ margin: 6.9rem auto auto auto;
   border: none;
   border-radius: 26px;
   filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.6)) brightness(80%);
+  
 }
+
 
 .relojes{
   background-image: url('../img/categorias/relojes.jpg');
@@ -64,8 +77,10 @@ margin: 6.9rem auto auto auto;
 .texto{
   text-decoration: none;
   color: white;
-  font-size: 49px;
+  font-size: 4.9rem;
   font-weight: bold;
   position: absolute;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  
 }
