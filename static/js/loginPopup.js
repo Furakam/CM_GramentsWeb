@@ -1,7 +1,10 @@
 var botonLoginAbrirPopup = document.getElementById('user-boton__mostrar'),
     botonLoginCerrarPopup = document.getElementById('user-boton__ocultar')
     loginContainer = document.getElementById('login-container'),
-    formContainer = document.getElementById('form-container');
+    formContainer = document.getElementById('form-container'),
+    botonMenuResponsive= document.getElementById('menu-bars'),
+    menuResponsive = document.getElementById('responsive-menu'),
+    botonMenuResponsiveX = document.getElementById('menu-x')
 
 botonLoginAbrirPopup.addEventListener('click', function(){
   loginContainer.classList.add('active'),
@@ -22,4 +25,20 @@ loginContainer.addEventListener('click', function(){
   formContainer.classList.remove('active'),
   botonLoginAbrirPopup.classList.remove('oculto'),
   botonLoginCerrarPopup.classList.remove('visible')
+});
+
+botonMenuResponsive.addEventListener('click', function(){
+  menuResponsive.classList.add('active'),
+  loginContainer.classList.add('active'),
+  botonMenuResponsive.classList.remove('menu-bars'),
+  botonMenuResponsive.classList.add('oculto'),
+  botonMenuResponsiveX.classList.add('active')
+});
+
+botonMenuResponsiveX.addEventListener('click', function(){
+  menuResponsive.classList.remove('active'),
+  loginContainer.classList.remove('active'),
+  botonMenuResponsive.classList.add('menu-bars'),
+  botonMenuResponsive.classList.remove('oculto'),
+  botonMenuResponsiveX.classList.remove('active')
 });

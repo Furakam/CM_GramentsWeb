@@ -148,7 +148,7 @@
   background:transparent;
   visibility: hidden;
   cursor: pointer;
-  z-index: 2;
+  z-index: 0;
 }
 .form-container{
   position: absolute;
@@ -243,8 +243,29 @@
   filter: brightness(130%);
 }
 /*?Aqui empieza el estilo del menu responsive*/
+.container-barsx{
+  display: none;
+}
 .menu-bars{
-  display:none;
+  visibility: visible;
+}
+.oculto{/*! menu-bars clase a añadir para ocultar*/
+  display: none;
+  visibility: hidden;
+}
+.menu-x{
+  display: none;
+  transform: scale(0.8);
+}
+.menu-x:hover{
+  transform: scale(0.9);
+}
+.menu-x.active{
+  display: flex;
+  visibility: visible;
+}
+.menu-bars:hover{
+  transform: scale(1.05);
 }
 .responsive-menu{
   display:none;
@@ -255,6 +276,10 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+  visibility: hidden;
+}
+.responsive-menu.active{
+  visibility: visible;
 }
 .responsive-menu__inicio, .responsive-menu__catalogo{
   display: inline-block;
@@ -325,6 +350,9 @@
   .nav .catalogo{
     display: none;
   }
+  .container-barsx{
+    display: inline-flex;
+  }
   .responsive-menu{
     display: flex;
   }
@@ -366,6 +394,7 @@
   }
   .responsive-menu__busqueda{
     display: flex;
+    transition: none;
   }
   .user-logo{
     margin-right: 2rem;
