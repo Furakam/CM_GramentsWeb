@@ -9,6 +9,7 @@ var botonLoginAbrirPopup = document.getElementById('user-boton__mostrar'),
 botonLoginAbrirPopup.addEventListener('click', function(){
   loginContainer.classList.add('active'),
   formContainer.classList.add('active'),
+  formContainer.classList.add('ocultar'),
   botonLoginAbrirPopup.classList.add('oculto'),
   botonLoginCerrarPopup.classList.add('visible')
 });
@@ -27,9 +28,10 @@ loginContainer.addEventListener('click', function(){
   botonLoginCerrarPopup.classList.remove('visible')
 });
 
+/*?Aqui empueza los eventos para el boton del menu responsive*/
 botonMenuResponsive.addEventListener('click', function(){
   menuResponsive.classList.add('active'),
-  loginContainer.classList.add('active'),
+  menuResponsive.classList.add('ocultar'),
   botonMenuResponsive.classList.remove('menu-bars'),
   botonMenuResponsive.classList.add('oculto'),
   botonMenuResponsiveX.classList.add('active')
@@ -37,7 +39,6 @@ botonMenuResponsive.addEventListener('click', function(){
 
 botonMenuResponsiveX.addEventListener('click', function(){
   menuResponsive.classList.remove('active'),
-  loginContainer.classList.remove('active'),
   botonMenuResponsive.classList.add('menu-bars'),
   botonMenuResponsive.classList.remove('oculto'),
   botonMenuResponsiveX.classList.remove('active')

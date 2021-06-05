@@ -12,6 +12,8 @@
 .nav{
   background:#212738;
   display:flex; 
+  position: fixed;
+  top:0;
   flex-wrap: wrap;
   text-decoration: none;
   width:100%;
@@ -21,7 +23,7 @@
   justify-content:space-between;
   padding-right: 1.8rem;
   flex-shrink: 1rem;
-  z-index: 1;
+  z-index:100;
 }
 /*?Estilo del logo*/
 .logo svg{
@@ -148,26 +150,53 @@
   background:transparent;
   visibility: hidden;
   cursor: pointer;
-  z-index: 0;
+  z-index: 1;
 }
+.login-container.active{
+  visibility: visible;
+
+}
+
 .form-container{
-  position: absolute;
+  position: fixed;
+  top:5.5rem;
   right: 0;
   width:32.5rem;
   height: 41.6rem;
   background: rgba(33, 39, 56, 0.8);
   border-radius: 0px 0px 10px 10px;
   cursor: auto;
-  z-index: 3;
   visibility: hidden;
+  animation-duration: .2s;
+  z-index: 1;
 }
-.login-container.active{
+.form-container.ocultar{
+  animation-name: loginContainerHidden;
   visibility: visible;
+  animation-fill-mode: forwards;
+}
+@keyframes loginContainerHidden {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-41.6rem);
+    visibility: hidden;
+  } 
 }
 .form-container.active{
   visibility: visible;
+  animation-name: loginContainer;
+  animation-duration: .2s;
 }
-
+@keyframes loginContainer {
+  0%{
+    transform: translateY(-41.6rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
 .form-container form{
   display: flex;
   flex-direction: column;
@@ -249,6 +278,7 @@
 .menu-bars{
   visibility: visible;
 }
+
 .oculto{/*! menu-bars clase a añadir para ocultar*/
   display: none;
   visibility: hidden;
@@ -269,7 +299,8 @@
 }
 .responsive-menu{
   display:none;
-  position:absolute;
+  top:0;
+  position:fixed;
   background: rgba(33, 39, 56, 0.8);
   width:100%;
   height: 20rem;
@@ -278,9 +309,35 @@
   z-index: 2;
   visibility: hidden;
 }
+.responsive-menu.ocultar{
+  visibility: visible;
+  animation-name:responsiveMenuHidden;
+  animation-fill-mode: forwards;
+  animation-duration: .2s;
+}
+@keyframes responsiveMenuHidden {
+  0%{
+    transform: translateY(5.5rem);
+  }
+  100%{
+    transform: translateY(-20rem);
+    visibility: hidden;
+  }
+}
 .responsive-menu.active{
   visibility: visible;
+  animation-name: responsiveMenu;
+  animation-duration: .2s;
 }
+@keyframes responsiveMenu {
+  0%{
+    transform: translateY(0rem);
+  }
+  100%{
+    transform: translateY(5.5rem);
+  }
+}
+
 .responsive-menu__inicio, .responsive-menu__catalogo{
   display: inline-block;
   margin: 2rem 0 2rem 0;
