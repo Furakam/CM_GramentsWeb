@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@310&display=swap');
 
-
+:root{
+  font-size: 10px;
+}
 
 .catalogo{
   text-decoration: underline;
@@ -19,15 +21,15 @@ color: #242F2D;
 
 .container-catalogo{
   display: flex;
-  width: 1064px;
-  height: 192px;
+  width: 106.4rem;
+  height: 19.2rem;
   margin: 0 auto 14.7rem auto;
   flex-wrap: wrap;
   justify-content: center;
 }
 .cartera{
   display: flex;
-  margin: 0 52px 0 52px;
+  margin: 0 5.2rem 0 5.2rem;
   
 }
 
@@ -35,7 +37,7 @@ color: #242F2D;
 
 .calzado{
   display: flex;
-  margin: 53px 0 0 0;
+  margin: 5.3rem 0 0 0;
 
 }
 .boton-container{
@@ -48,13 +50,13 @@ color: #242F2D;
   transform: scale(1.1);
 }
 .boton{
-  width: 320px;
-  height: 68px;
+  width: 32rem;
+  height: 6.8rem;
   background-size: cover;
   cursor: pointer;
   border: none;
-  border-radius: 26px;
-  filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.6)) brightness(80%);
+  border-radius: 2.6rem;
+  filter: drop-shadow(0px 0px 1.4rem rgba(0, 0, 0, .6)) brightness(65%);
   
 }
 
@@ -81,4 +83,46 @@ color: #242F2D;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   
+}
+
+
+/*?Responsive Design*/
+@media screen and (max-width: 1090px) {
+  .container-catalogo{
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  h1{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+  .boton-container{
+    margin-top: 2.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container-catalogo{
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  .boton-container{
+    margin-top: 2.5rem;
+  }
+  h1{
+    margin-bottom: 3rem;
+    font-size:9vw;
+  }
+  .texto{
+    font-size: 11vw;
+  }
+  .boton{
+    width: 72vw;
+    height: 15vw;
+  }
 }
