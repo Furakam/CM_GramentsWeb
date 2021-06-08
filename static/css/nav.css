@@ -391,7 +391,7 @@
 
 
 /*?MediaQueris*/
-@media only screen and (max-width: 1110px){
+@media only screen and (max-width: 1190px){
   .footer__info1{
     font-size: 2rem;
   }
@@ -403,13 +403,7 @@
   .footer__info1{
     font-size: 1.8rem;
   }
-  .line{
-    display: flex;
-    margin: 0 auto 0 auto;
-    width:80%;
-    height: .2rem;
-    background: #ffffff;
-  }
+  
   .footer__info2{
     font-size: 1.8rem;
   }
@@ -449,6 +443,13 @@
     min-width:49.2rem;
     width:55%;
     padding-bottom: 1rem;
+  }
+  .line{
+    display: flex;
+    margin: 0 auto 0 auto;
+    width:80%;
+    height: .2rem;
+    background: #ffffff;
   }
   .footer__info2{
     text-align: center;
